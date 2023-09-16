@@ -2,14 +2,12 @@ import java.util.*;
 public class ATM3
 {
 	private double balance;
-    private ArrayList<String> transactionHistory;
+    private ArrayList<String> transactionHistory;	//for note down of transaction history by using ArrayList()
 	Scanner scanner = new Scanner(System.in);
 		//user verification
 		public void start()
 		{
-			
-		
-		System.out.print("Enter User ID: ");
+	System.out.print("Enter User ID: ");
         String userId = scanner.nextLine();
         System.out.print("Enter User PIN: ");
         String userPin = scanner.nextLine();
@@ -49,7 +47,7 @@ public class ATM3
                 case 3:
                     System.out.println("Enter transfer amount:");
                     double transferAmount = scanner.nextDouble();
-                    // Create another ATM object for the sake of example
+                    // Create another ATM object for example
                     ATM3 otherAtm = new ATM3();
                     myAtm.transfer(transferAmount, otherAtm);
                     break;
